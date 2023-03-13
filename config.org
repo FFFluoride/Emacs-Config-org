@@ -17,3 +17,9 @@
 
 * Which-key
 ** setting up which key
+#+begin_src emacs-lisp
+  (use-package which-key
+    :ensure t
+    :init
+    (which-key-mode))
+#+end_src
