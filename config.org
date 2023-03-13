@@ -7,7 +7,7 @@
 (ad-activate 'ansi-term)
 #+end_src
 * Org Mode
-** Org mode bullets
+* Org mode bullets
 #+begin_src emacs-lisp
   (use-package org-bullets
     :ensure t
@@ -22,4 +22,12 @@
     :ensure t
     :init
     (which-key-mode))
+#+end_src
+* Beacon
+** setup
+#+begin_src emacs-lisp
+  (use-package beacon
+    :ensure t
+    :init
+    (beacon-mode 1))
 #+end_src
