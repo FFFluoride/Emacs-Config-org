@@ -45,3 +45,8 @@
 #+begin_src emacs-lisp
   (defalias 'yes-or-no-p 'y-or-n-p)
 #+end_src
+* Rebound keys
+** ansi term
+#+begin_src emacs-lisp
+  (global-set-key (kbd "C-#") 'ansi-term)
+#+end_src
