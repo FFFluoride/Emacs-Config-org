@@ -3,3 +3,4 @@ config.el
 auto-save-list/
 elpa/
 init.el
+*#
