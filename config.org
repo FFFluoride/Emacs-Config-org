@@ -41,6 +41,12 @@
   (setq inhibit-startup-message t)
   (setq ring-bell-function 'ignore)
 #+end_src
+** remove tool bar, menu bar and scroll bar
+#+begin_src emacs-lisp
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+#+end_src
 ** aliases
 #+begin_src emacs-lisp
   (defalias 'yes-or-no-p 'y-or-n-p)
@@ -50,3 +56,4 @@
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-#") 'ansi-term)
 #+end_src
+
