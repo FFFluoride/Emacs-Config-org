@@ -51,6 +51,14 @@
 #+begin_src emacs-lisp
   (defalias 'yes-or-no-p 'y-or-n-p)
 #+end_src
+** global highlight
+#+begin_src emacs-lisp
+  (when window-system (global-hl-line-mode t))
+#+end_src
+** global prettify symbols
+#+begin_src emacs-lisp
+  (when (global-prettify-symbols-mode t))
+#+end_src
 * Rebound keys
 ** ansi term
 #+begin_src emacs-lisp
