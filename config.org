@@ -30,3 +30,18 @@
     :init
     (beacon-mode 1))
 #+end_src
+* Variables
+** no backup files or auto saves
+#+begin_src emacs-lisp
+  (setq make-backup-file nil)
+  (setq auto-save-default nil)
+#+end_src
+** anoyances
+#+begin_src emacs-lisp
+  (setq inhibit-startup-message t)
+  (setq ring-bell-function 'ignore)
+#+end_src
+** aliases
+#+begin_src emacs-lisp
+  (defalias 'yes-or-no-p 'y-or-n-p)
+#+end_src
