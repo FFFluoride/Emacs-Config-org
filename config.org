@@ -4,7 +4,13 @@
   (defvar my-term-shell "/bin/bash")
   (defadvice ansi-term (before force-bash)
     (interactive (list my-term-shell)))
-(ad-activate 'ansi-term)
+  (ad-activate 'ansi-term)
+#+end_src
+** Vterm
+#+begin_src emacs-lisp
+  (setq vterm-module-cmake-args "-DUSE_SYSTEM_LIBVTERM=no")
+  (use-package vterm
+    :ensure t)
 #+end_src
 * Org Mode
 ** Org mode bullets
@@ -59,9 +65,13 @@
 #+begin_src emacs-lisp
   (when (global-prettify-symbols-mode t))
 #+end_src
-* Rebound keys
-** ansi term
+** conservative scroll
 #+begin_src emacs-lisp
-  (global-set-key (kbd "C-#") 'ansi-term)
+  (setq scroll-conservatively 100)
+#+end_src
+* Rebound keys
+** vterm
+#+begin_src emacs-lisp
+  (global-set-key (kbd "C-#") 'vterm)
 #+end_src
 
