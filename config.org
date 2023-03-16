@@ -69,6 +69,10 @@
 #+begin_src emacs-lisp
   (setq scroll-conservatively 100)
 #+end_src
+** reload when file changes
+#+begin_src emacs-lisp
+  (global-auto-revert-mode t)
+#+end_src
 * Rebound keys
 ** vterm
 #+begin_src emacs-lisp
