@@ -78,4 +78,8 @@
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-#") 'vterm)
 #+end_src
+** compile org mode to pdf
+#+begin_src emacs-lisp
+  (global-set-key (kbd "M-p") 'org-latex-export-to-pdf)
+#+end_src
 
