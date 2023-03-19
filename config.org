@@ -42,10 +42,12 @@
     (beacon-mode 1))
 #+end_src
 * Variables
-** no backup files or auto saves
+** back up and auto save directory
 #+begin_src emacs-lisp
-  (setq make-backup-file nil)
-  (setq auto-save-default nil)
+  (setq backup-directory-alist
+	`((".*" . "~/.emacs_saves")))
+  (setq auto-save-file-name-transforms
+	`((".*" "~/.emacs_saves" t)))
 #+end_src
 ** anoyances
 #+begin_src emacs-lisp
