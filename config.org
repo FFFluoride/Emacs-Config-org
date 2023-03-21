@@ -1,3 +1,8 @@
+* Minor stuff
+** subword
+#+begin_src emacs-lisp
+  (global-subword-mode 1)
+#+end_src
 * Terminal
 ** Setting up bash
 #+begin_src emacs-lisp
