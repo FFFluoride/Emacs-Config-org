@@ -18,6 +18,10 @@
     :ensure t)
 #+end_src
 * Org Mode
+** basic config
+#+begin_src emacs-lisp
+  (setq org-src-window-setup 'current-window)
+#+end_src
 ** Org mode bullets
 #+begin_src emacs-lisp
   (use-package org-bullets
