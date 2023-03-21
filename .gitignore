@@ -4,3 +4,5 @@ auto-save-list/
 elpa/
 init.el
 *#
+ido.last
+smex-items
