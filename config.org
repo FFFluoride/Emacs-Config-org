@@ -51,6 +51,12 @@
     :init
     (which-key-mode))
 #+end_src
+* sudo edit
+#+begin_src emacs-lisp
+  (use-package sudo-edit
+    :ensure t
+    :bind ("C-x C-1" . sudo-edit))
+#+end_src
 * Beacon
 ** setup
 #+begin_src emacs-lisp
