@@ -8,6 +8,14 @@
 			      ))
   (electric-pair-mode t)
 #+end_src
+** conf mode better indents
+#+begin_src emacs-lisp
+  (add-hook 'conf-mode-hook
+	    (lambda ()
+	      (setq indent-line-function #'insert-tab
+		    indent-tabs-mode     t)))
+  (setq indent-tabs-mode t)
+#+end_src
 ** subword
 #+begin_src emacs-lisp
   (global-subword-mode 1)
@@ -220,5 +228,9 @@
   (global-set-key (kbd "C-x 3") 'split-and-follow-vertically)
 #+end_src
 
-
-
+* nginx mode
+#+begin_src emacs-lisp
+  (use-package nginx-mode
+    :ensure t
+    :init)
+#+end_src
