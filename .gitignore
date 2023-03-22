@@ -6,3 +6,4 @@ init.el
 *#
 ido.last
 smex-items
+tramp
