@@ -241,3 +241,15 @@
     :ensure t
     :init)
 #+end_src
+* Borderless window on startup
+#+begin_src emacs-lisp
+  (set-frame-parameter nil 'undecorated t)
+#+end_src
+* Correct emacs size on startup
+#+begin_src emacs-lisp
+  (setq frame-resize-pixelwise t)
+  (setq default-frame-alist
+	'((top . 0) (left . 0)
+	  (width . 80) (height . 40)))
+  (setq initial-frame-alist '((top . 0) (left . 0) (width . 80) (height . 200)))
+#+end_src
