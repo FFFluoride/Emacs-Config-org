@@ -5,6 +5,7 @@
 			      (?\( . ?\))
 			      (?\[ . ?\])
 			      (?\{ . ?\})
+                              (?\' . ?\')
 			      ))
   (electric-pair-mode t)
 #+end_src
@@ -43,6 +44,11 @@
 ** basic config
 #+begin_src emacs-lisp
   (setq org-src-window-setup 'current-window)
+#+end_src
+** org mode sub and super scripts
+#+begin_src emacs-lisp
+  (setq org-pretty-entities t)
+  (setq org-pretty-entities-include-sub-superscripts t)
 #+end_src
 ** Org mode bullets
 #+begin_src emacs-lisp
