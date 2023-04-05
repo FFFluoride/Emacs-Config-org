@@ -172,6 +172,13 @@
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-x b") 'ibuffer)
 #+end_src
+** kill current buffer by default
+#+begin_src emacs-lisp
+  (defun kill-curr-buffer ()
+    (interactive)
+    (kill-buffer (curent-buffer)))
+  (global-set-key (kbd "C-x k") `kill-current-buffer)
+#+end_src
 * avy
 #+begin_src emacs-lisp
   (use-package avy
@@ -180,6 +187,17 @@
     ("M-s" . avy-goto-char))
 #+end_src
 * convienent functions
+** copy whole line
+#+begin_src emacs-lisp
+  (defun copy-whole-line ()
+    (interactive)
+    (save-excursion
+      (kill-new
+       (buffer-substring
+	(point-at-bol)
+	(point-at-eol)))))
+  (global-set-key (kbd "C-c w l") `copy-whole-line)
+#+end_src
 ** kill-whole-word
 #+begin_src emacs-lisp
   (defun kill-whole-word ()
