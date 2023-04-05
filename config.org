@@ -1,4 +1,9 @@
 * Minor stuff
+** show lines and columns on the modeline
+#+begin_src emacs-lisp
+  (line-number-mode 1)
+  (column-number-mode 1)
+#+end_src
 ** electric
 
 #+begin_src emacs-lisp
@@ -57,6 +62,10 @@
     :ensure t
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+#+end_src
+** org mode table blank field
+#+begin_src emacs-lisp
+  (setq org-table-auto-blank-field nil)
 #+end_src
 * Which-key
 ** setting up which key
