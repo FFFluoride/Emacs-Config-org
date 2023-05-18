@@ -79,7 +79,7 @@
 #+begin_src emacs-lisp
   (use-package sudo-edit
     :ensure t
-    :bind ("C-x C-1" . sudo-edit))
+    :bind ("C-c C-c 1" . sudo-edit))
 #+end_src
 * Beacon
 ** setup
@@ -131,7 +131,7 @@
 * Rebound keys
 ** multi-vterm
 #+begin_src emacs-lisp
-  (global-set-key (kbd "C-#") 'multi-vterm)
+  (global-set-key (kbd "C-c C-c m") 'multi-vterm)
 #+end_src
 ** compile org mode to pdf
 #+begin_src emacs-lisp
