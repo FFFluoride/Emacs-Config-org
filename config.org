@@ -5,7 +5,6 @@
   (column-number-mode 1)
 #+end_src
 ** electric
-
 #+begin_src emacs-lisp
   (setq electric-pair-pairs '(
 			      (?\( . ?\))
@@ -28,13 +27,6 @@
   (global-subword-mode 1)
 #+end_src
 * Terminal
-** Setting up bash
-#+begin_src emacs-lisp
-  (defvar my-term-shell "/bin/bash")
-  (defadvice ansi-term (before force-bash)
-    (interactive (list my-term-shell)))
-  (ad-activate 'ansi-term)
-#+end_src
 ** Vterm
 #+begin_src emacs-lisp
   (setq vterm-module-cmake-args "-DUSE_SYSTEM_LIBVTERM=no")
@@ -116,10 +108,6 @@
 #+begin_src emacs-lisp
   (when window-system (global-hl-line-mode t))
 #+end_src
-** global prettify symbols
-#+begin_src emacs-lisp
-  (when (global-prettify-symbols-mode t))
-#+end_src
 ** conservative scroll
 #+begin_src emacs-lisp
   (setq scroll-conservatively 100)
@@ -135,7 +123,7 @@
 #+end_src
 ** compile org mode to pdf
 #+begin_src emacs-lisp
-  (global-set-key (kbd "M-p") 'org-latex-export-to-pdf)
+  (global-set-key (kbd "C-c C-c p") 'org-latex-export-to-pdf)
 #+end_src
 
 * IDO
@@ -196,7 +184,7 @@
        (buffer-substring
 	(point-at-bol)
 	(point-at-eol)))))
-  (global-set-key (kbd "C-c w l") `copy-whole-line)
+  (global-set-key (kbd "C-c y y") `copy-whole-line)
 #+end_src
 ** kill-whole-word
 #+begin_src emacs-lisp
@@ -204,7 +192,7 @@
     (interactive)
     (backward-word)
     (kill-word 1))
-  (global-set-key (kbd "C-c w w") 'kill-whole-word)
+  (global-set-key (kbd "C-c d d") 'kill-whole-word)
 #+end_src
 * config edit/reload
 ** edit
