@@ -108,6 +108,8 @@
 #+begin_src emacs-lisp
   (when window-system (global-hl-line-mode t))
 #+end_src
+<<<<<<< HEAD
+=======
 ** conservative scroll
 #+begin_src emacs-lisp
   (setq scroll-conservatively 100)
