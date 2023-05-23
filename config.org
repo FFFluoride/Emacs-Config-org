@@ -123,6 +123,10 @@
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-c C-c m") 'multi-vterm)
 #+end_src
+** truncate-lines
+#+begin_src emacs-lisp
+  (global-set-key (kbd "C-x p") 'toggle-truncate-lines)
+#+end_src
 ** compile org mode to pdf
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-c C-c p") 'org-latex-export-to-pdf)
