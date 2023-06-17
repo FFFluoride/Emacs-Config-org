@@ -327,3 +327,9 @@
       (diminish 'subword-mode))
 #+end_src
 #+end_src
+* popup killring
+#+begin_src emacs-lisp
+  (use-package popup-kill-ring
+    :ensure t
+    :bind ("M-y" . popup-kill-ring))
+#+end_src
