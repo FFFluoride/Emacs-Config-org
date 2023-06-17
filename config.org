@@ -305,3 +305,27 @@
     :init
     (add-hook 'after-init-hook 'global-company-mode))
 #+end_src
+* modeline
+** spaceline
+#+begin_src emacs-lisp
+  (use-package spaceline
+    :ensure t
+    :config
+    (require 'spaceline-config)
+    (setq powerline-default-separator (quote arrow))
+    (spaceline-spacemacs-theme))
+#+end_src
+** diminish
+#+begin_src emacs-lisp
+    (use-package diminish
+      :ensure t
+      :init
+      (diminish 'company-mode)
+      (diminish 'rainbow-mode)
+      (diminish 'beacon-mode)
+      (diminish 'which-key-mode)
+      (diminish 'org-src-mode)
+      (diminish 'eldoc-mode)
+      (diminish 'subword-mode))
+#+end_src
+#+end_src
