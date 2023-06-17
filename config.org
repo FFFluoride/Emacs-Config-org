@@ -226,6 +226,12 @@
 
   (my-global-rainbow-mode 1)
 #+end_src
+#+begin_src emacs-lisp
+  (use-package rainbow-delimiters
+    :ensure t
+    :init
+    (rainbow-delimiters-mode 1))
+#+end_src
 * switch window
 #+begin_src emacs-lisp
   (use-package switch-window
