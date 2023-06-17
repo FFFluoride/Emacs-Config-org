@@ -274,3 +274,14 @@
 	  (width . 80) (height . 40)))
   (setq initial-frame-alist '((top . 0) (left . 0) (width . 80) (height . 200)))
 #+end_src
+* Sass
+** sass
+#+begin_src emacs-lisp
+ ; (use-package sass-mode
+   ; :ensure t)
+#+end_src
+** ssaass
+#+begin_src emacs-lisp
+  (use-package ssass-mode
+    :ensure t)
+#+end_src
