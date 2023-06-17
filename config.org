@@ -229,12 +229,7 @@
 #+begin_src emacs-lisp
   (use-package rainbow-mode
     :ensure t
-    :init (rainbow-mode 1))
-
-  (define-globalized-minor-mode my-global-rainbow-mode rainbow-mode
-    (lambda () (rainbow-mode 1)))
-
-  (my-global-rainbow-mode 1)
+    :init (add-hook 'prog-mode-hook 'rainbow-mode))
 #+end_src
 #+begin_src emacs-lisp
   (use-package rainbow-delimiters
