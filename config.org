@@ -333,3 +333,10 @@
     :ensure t
     :bind ("M-y" . popup-kill-ring))
 #+end_src
+* swiper
+#+begin_src emacs-lisp
+  (use-package swiper
+    :ensure t
+    :bind
+    ("C-s" . swiper))
+#+end_src
