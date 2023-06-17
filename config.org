@@ -73,6 +73,15 @@
     :ensure t
     :bind ("C-c C-c 1" . sudo-edit))
 #+end_src
+* dashboard
+#+begin_src emacs-lisp
+  (use-package dashboard
+    :ensure t
+    :config
+    (dashboard-setup-startup-hook)
+    (setq dashboard-items '((recents . 10)))
+    (setq dashboard-banner-logo-title "Welcome to dashboard!"))
+#+end_src
 * Beacon
 ** setup
 #+begin_src emacs-lisp
