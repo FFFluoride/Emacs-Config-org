@@ -242,7 +242,7 @@
   (use-package rainbow-delimiters
     :ensure t
     :init
-    (rainbow-delimiters-mode 1))
+    (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 #+end_src
 * switch window
 #+begin_src emacs-lisp
@@ -293,21 +293,15 @@
   (setq initial-frame-alist '((top . 0) (left . 0) (width . 80) (height . 200)))
 #+end_src
 * Sass
-** sass
-#+begin_src emacs-lisp
- ; (use-package sass-mode
-   ; :ensure t)
-#+end_src
 ** ssaass
 #+begin_src emacs-lisp
   (use-package ssass-mode
     :ensure t)
 #+end_src
-* autocompletione
+* autocompletion
 #+begin_src emacs-lisp
   (use-package company
     :ensure t
     :init
     (add-hook 'after-init-hook 'global-company-mode))
-
 #+end_src
