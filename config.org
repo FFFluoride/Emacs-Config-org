@@ -340,3 +340,9 @@
     :bind
     ("C-s" . swiper))
 #+end_src
+* expand region
+#+begin_src emacs-lisp
+  (use-package expand-region
+    :ensure t
+    :bind ("C-q" . er/expand-region))
+#+end_src
