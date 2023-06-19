@@ -285,6 +285,7 @@
 	  (width . 80) (height . 40)))
   (setq initial-frame-alist '((top . 0) (left . 0) (width . 80) (height . 200)))
 #+end_src
+
 * Sass
 ** ssaass
 #+begin_src emacs-lisp
@@ -340,4 +341,9 @@
   (use-package expand-region
     :ensure t
     :bind ("C-q" . er/expand-region))
+#+end_src
+* Rust mode
+#+begin_src emacs-lisp
+  (use-package rust-mode
+    :ensure t)
 #+end_src
