@@ -44,8 +44,9 @@
   (setq org-src-window-setup 'current-window)
   (add-to-list 'org-structure-template-alist
 	       '("el" . "src emacs-lisp"))
+  (add-to-list 'org-structure-template-alist
+	       '("sh" . "src shell"))
 #+end_src
-
 ** org mode sub and super scripts
 #+begin_src emacs-lisp
   (setq org-pretty-entities t)
@@ -82,8 +83,7 @@
     :ensure t
     :config
     (dashboard-setup-startup-hook)
-    (setq dashboard-items '((recents . 10)))
-    (setq dashboard-banner-logo-title "Welcome to dashboard!"))
+    (setq dashboard-items '((recents . 10))))
 #+end_src
 * Beacon
 ** setup
@@ -135,7 +135,7 @@
 #+end_src
 ** truncate-lines
 #+begin_src emacs-lisp
-  (global-set-key (kbd "C-x p") 'toggle-truncate-lines)
+  (global-set-key (kbd "C-c C-c p") 'toggle-truncate-lines)
 #+end_src
 ** compile org mode to pdf
 #+begin_src emacs-lisp
