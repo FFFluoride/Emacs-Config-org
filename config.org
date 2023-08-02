@@ -57,11 +57,16 @@
   (use-package org-bullets
     :ensure t
     :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+    (add-hook 'org-mode-hook 'org-bullets-mode ))
 #+end_src
-** org mode table blank field
+** org mode table blank field''
 #+begin_src emacs-lisp
   (setq org-table-auto-blank-field nil)
+#+end_src
+** line wrap
+#+begin_src emacs-lisp
+  (add-hook 'org-mode-hook 'visual-line-mode)
+  (add-hook 'org-mode-hook 'toggle-word-wrap)
 #+end_src
 * Which-key
 ** setting up which key
@@ -334,7 +339,8 @@
       (diminish 'which-key-mode)
       (diminish 'org-src-mode)
       (diminish 'eldoc-mode)
-      (diminish 'subword-mode))
+      (diminish 'subword-mode)
+      (diminish 'flycheck-mode))
 #+end_src
 #+end_src
 * popup killring
@@ -368,6 +374,7 @@
     :init 
     (global-flycheck-mode)
     (setq company-tooltip-align-annotations t))
+  (setq flycheck-global-modes '(not rust-mode))
 #+end_src
 * Typescript mode
 #+begin_src emacs-lisp
