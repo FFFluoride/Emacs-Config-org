@@ -68,6 +68,10 @@
   (add-hook 'org-mode-hook 'visual-line-mode)
   (add-hook 'org-mode-hook 'toggle-word-wrap)
 #+end_src
+** increase size of org mode latex preview
+#+begin_src emacs-lisp
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
+#+end_src
 * Which-key
 ** setting up which key
 #+begin_src emacs-lisp
