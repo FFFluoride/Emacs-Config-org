@@ -136,17 +136,12 @@
 * Rebound keys
 ** multi-vterm
 #+begin_src emacs-lisp
-  (global-set-key (kbd "C-c C-c m") 'multi-vterm)
+  (global-set-key (kbd "C-c m m") 'multi-vterm)
 #+end_src
 ** truncate-lines
 #+begin_src emacs-lisp
-  (global-set-key (kbd "C-c C-c p") 'toggle-truncate-lines)
+  (global-set-key (kbd "C-c m p") 'toggle-truncate-lines)
 #+end_src
-** compile org mode to pdf
-#+begin_src emacs-lisp
-  (global-set-key (kbd "C-c C-c p") 'org-latex-export-to-pdf)
-#+end_src
-
 * IDO
 ** enable ido mode
 #+begin_src emacs-lisp
