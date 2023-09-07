@@ -80,7 +80,7 @@
 #+begin_src emacs-lisp
   (use-package sudo-edit
     :ensure t
-    :bind ("C-c C-c 1" . sudo-edit))
+    :bind ("C-c m r" . sudo-edit))
 #+end_src
 * dashboard
 #+begin_src emacs-lisp
