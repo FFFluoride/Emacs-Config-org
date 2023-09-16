@@ -46,6 +46,9 @@
 	       '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist
 	       '("sh" . "src shell"))
+  (global-set-key (kbd "C-c l") #'org-store-link)
+  (global-set-key (kbd "C-c a") #'org-agenda)
+  (global-set-key (kbd "C-c c") #'org-capture)
 #+end_src
 ** org mode sub and super scripts
 #+begin_src emacs-lisp
