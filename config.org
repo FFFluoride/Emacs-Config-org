@@ -91,8 +91,9 @@
   (use-package dashboard
     :ensure t
     :config
-    (dashboard-setup-startup-hook)
-    (setq dashboard-items '((recents . 10))))
+    (setq dashboard-items '((recents . 10)))
+    (dashboard-setup-startup-hook))
+  (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 #+end_src
 * Beacon
 ** setup
