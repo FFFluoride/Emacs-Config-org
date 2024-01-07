@@ -75,6 +75,10 @@
 #+begin_src emacs-lisp
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
 #+end_src
+** image width
+#+begin_src emacs-lisp
+  (setq org-image-actual-width 600)
+#+end_src
 * Which-key
 ** setting up which key
 #+begin_src emacs-lisp
@@ -320,6 +324,8 @@
     :ensure t
     :init
     (add-hook 'after-init-hook 'global-company-mode))
+
+  (setq global-company-modes '(not idris2-repl-mode))
 #+end_src
 * modeline
 ** spaceline
@@ -417,3 +423,13 @@
     (eglot-confirm-server-initiated-edits nil)  ;; allow edits without confirmation
     )
 #+end_src
+* Idris Mode
+  #+begin_src emacs-lisp
+      (use-package idris-mode
+	:ensure t
+	:config
+	(require 'flycheck-idris) ;; Syntax checker
+	(add-hook 'idris-mode-hook #'flycheck-mode)
+	:custom
+	(idris-interpreter-path "/home/fffluoride/.pack/bin/idris2"))
+  #+end_src
