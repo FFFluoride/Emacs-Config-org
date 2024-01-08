@@ -423,6 +423,21 @@
     (eglot-confirm-server-initiated-edits nil)  ;; allow edits without confirmation
     )
 #+end_src
+<<<<<<< HEAD
+** ormolu
+#+begin_src emacs-lisp
+  (use-package reformatter
+    :ensure t)
+#+end_src
+#+begin_src emacs-lisp
+  (use-package ormolu
+    :ensure t
+    :hook (haskell-mode . ormolu-format-on-save-mode)
+    :bind
+    (:map haskell-mode-map
+	  ("C-c C-f" . ormolu-format-buffer)))
+#+end_src
+
 * Idris Mode
   #+begin_src emacs-lisp
       (use-package idris-mode
