@@ -408,6 +408,15 @@
    #+begin_src emacs-lisp
      (use-package haskell-mode
        :ensure t)
+
+     ;; (setq flycheck-haskell-stack-ghc-executable
+     ;;       "/home/fffluoride/.ghcup/bin/ghc")
+
+     ;; (setq flycheck-haskell-hlint-executable
+     ;;       "/home/fffluoride/.cabal/bin/hlint")
+
+     ;; (setq flycheck-haskell-stack-ghc-executable
+     ;;       "/home/fffluoride/.ghcup/bin/stack")
    #+end_src
 ** hlint
    #+begin_src emacs-lisp
