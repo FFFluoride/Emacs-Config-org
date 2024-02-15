@@ -26,6 +26,22 @@
 #+begin_src emacs-lisp
   (global-subword-mode 1)
 #+end_src
+** tetris
+#+begin_src emacs-lisp
+  (setq gamegrid-glyph-height-mm 10.0)
+
+  (defvar tetris-mode-map
+    (make-sparse-keymap 'tetris-mode-map))
+
+  (define-key tetris-mode-map "n"     'tetris-start-game)
+  (define-key tetris-mode-map "q"     'tetris-end-game)
+  (define-key tetris-mode-map "p"     'tetris-pause-game)
+  (define-key tetris-mode-map "j"     'tetris-move-bottom)
+  (define-key tetris-mode-map "a"  'tetris-move-left)
+  (define-key tetris-mode-map "d" 'tetris-move-right)
+  (define-key tetris-mode-map "k"    'tetris-rotate-prev)
+  (define-key tetris-mode-map "s"  'tetris-move-down)
+#+end_src
 * Terminal
 ** Vterm
 #+begin_src emacs-lisp
@@ -433,5 +449,5 @@
 	(require 'flycheck-idris) ;; Syntax checker
 	(add-hook 'idris-mode-hook #'flycheck-mode)
 	:custom
-	(idris-interpreter-path "/home/fffluoride/.pack/bin/idris2"))
+	(idris-interpreter-path "/home/fffluoride/.idris2/bin/idris2"))
   #+end_src
