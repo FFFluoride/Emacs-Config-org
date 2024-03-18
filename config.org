@@ -28,7 +28,7 @@
 #+end_src
 ** tetris
 #+begin_src emacs-lisp
-  (setq gamegrid-glyph-height-mm 10.0)
+  (setq gamegrid-glyph-height-mm 5.0)
 
   (defvar tetris-mode-map
     (make-sparse-keymap 'tetris-mode-map))
@@ -443,11 +443,11 @@
    #+end_src
 * Idris Mode
   #+begin_src emacs-lisp
-      (use-package idris-mode
-	:ensure t
-	:config
-	(require 'flycheck-idris) ;; Syntax checker
-	(add-hook 'idris-mode-hook #'flycheck-mode)
-	:custom
-	(idris-interpreter-path "/home/fffluoride/.idris2/bin/idris2"))
+    (use-package idris-mode
+      :ensure t
+      :config
+      (require 'flycheck-idris) ;; Syntax checker
+      (add-hook 'idris-mode-hook #'flycheck-mode)
+      :custom
+      (idris-interpreter-path "/home/fffluoride/.pack/bin/idris2"))
   #+end_src
