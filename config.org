@@ -170,6 +170,13 @@
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-c m p") 'toggle-truncate-lines)
 #+end_src
+** shrink/enlarge-window-horizontally
+#+begin_src emacs-lisp
+  (global-set-key (kbd "C-x ]") 'enlarge-window-horizontally)
+  (global-set-key (kbd "C-x [") 'shrink-window-horizontally)
+  (global-set-key (kbd "C-c C-u") 'enlarge-window)
+  (global-set-key (kbd "C-c C-v") 'shrink-window)
+#+end_src
 * IDO
 ** enable ido mode
 #+begin_src emacs-lisp
@@ -448,6 +455,10 @@
       :config
       (require 'flycheck-idris) ;; Syntax checker
       (add-hook 'idris-mode-hook #'flycheck-mode)
+      ;(require 'idris-format) ;; Prettification commands
+      (add-to-list 'completion-ignored-extensions ".ibc") ;; Idris 1 artefacts
       :custom
-      (idris-interpreter-path "/home/fffluoride/.pack/bin/idris2"))
+      (idris-interpreter-path "idris2")
+      (idris-hole-show-on-load nil)
+      (idris-repl-show-repl-on-startup nil))
   #+end_src
