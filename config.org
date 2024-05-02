@@ -28,7 +28,7 @@
 #+end_src
 ** tetris
 #+begin_src emacs-lisp
-  (setq gamegrid-glyph-height-mm 5.0)
+  (setq gamegrid-glyph-height-mm 10.0)
 
   (defvar tetris-mode-map
     (make-sparse-keymap 'tetris-mode-map))
