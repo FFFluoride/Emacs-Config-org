@@ -11,6 +11,8 @@
 			      (?\[ . ?\])
 			      (?\{ . ?\})
                               (?\' . ?\')
+			      (?\` . ?\`)
+			      (?\| . ?\|)
 			      ))
   (electric-pair-mode t)
 #+end_src
@@ -362,17 +364,18 @@
 #+end_src
 ** diminish
 #+begin_src emacs-lisp
-    (use-package diminish
-      :ensure t
-      :init
-      (diminish 'company-mode)
-      (diminish 'rainbow-mode)
-      (diminish 'beacon-mode)
-      (diminish 'which-key-mode)
-      (diminish 'org-src-mode)
-      (diminish 'eldoc-mode)
-      (diminish 'subword-mode)
-      (diminish 'flycheck-mode))
+  (use-package diminish
+    :ensure t
+    :init
+    (diminish 'company-mode)
+    (diminish 'rainbow-mode)
+    (diminish 'beacon-mode)
+    (diminish 'which-key-mode)
+    (diminish 'org-src-mode)
+    (diminish 'eldoc-mode)
+    (diminish 'subword-mode)
+    (diminish 'flycheck-mode)
+    (diminish 'drag-stuff-mode))
 #+end_src
 #+end_src
 * popup killring
@@ -461,4 +464,14 @@
       (idris-interpreter-path "idris2")
       (idris-hole-show-on-load nil)
       (idris-repl-show-repl-on-startup nil))
+  #+end_src
+* Drag stuff
+  #+begin_src emacs-lisp
+    (use-package drag-stuff
+      :ensure t
+      :bind ("<M-up>" . drag-stuff-up)
+      :bind ("<M-down>" . drag-stuff-down)
+      :bind ("<M-right>" . drag-stuff-right)
+      :bind ("<M-left>" . drag-stuff-left))
+    (drag-stuff-mode t)
   #+end_src
